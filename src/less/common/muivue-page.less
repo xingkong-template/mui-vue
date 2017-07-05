@@ -1,0 +1,63 @@
+.muivue-page-out-enter-active,
+.muivue-page-out-leave-active,
+.muivue-page-in-enter-active,
+.muivue-page-in-leave-active {
+  will-change: transform;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.muivue-page-out-enter-active {
+  left: -100%;
+  animation: pageInLeft 0.5s ease-in forwards;
+}
+.muivue-page-out-leave-active {
+  animation: pageOutRight 0.5s ease-out forwards;
+}
+.muivue-page-in-enter-active {
+  left: 100%;
+  animation: pageInRight 0.5s ease-in forwards;
+}
+.muivue-page-in-leave-active {
+  animation: pageOutLeft 0.5s ease-out forwards;
+}
+@keyframes pageInLeft {
+  0 {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes pageOutLeft {
+  0 {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes pageInRight {
+  0 {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes pageOutRight {
+  0 {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}

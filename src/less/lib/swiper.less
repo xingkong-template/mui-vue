@@ -1,0 +1,49 @@
+.mui-swiper {
+    .layout {
+        max-width: 640px;
+        min-width: 320px;
+        background-color: #fff;
+        height: auto;
+    }
+    .box {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        ul {
+            width: 1000%;
+            -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+            li {
+                list-style: none;
+                float: left;
+                width: 10%;
+                a {
+                    display: block;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+        ol {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                li {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: 1px solid #fff;
+                    float: left;
+                    margin-right: 10px;
+                }
+            }
+    }
+    .active {
+        background-color: #daa520;
+    }
+}

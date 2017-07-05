@@ -1,0 +1,59 @@
+#actionsheet{
+    #actionsheet-mask{
+        animation: maskin-animations 0.3s ease-in forwards;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+        background: rgba(0,0,0,0.3);
+    }
+    ul{
+        position: fixed;
+        bottom:0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background: #ddd;
+        animation: actionsheet-animations 0.3s ease-in forwards;
+        li{
+            position: relative; 
+        }
+         .actionsheet-li{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: #FFFFFF;
+        }
+        .closeBtn{
+            margin-top: 10px;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: #FFFFFF;
+        }
+        li:after{
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            border-bottom: 1px solid #D9D9D9;
+            color: #D9D9D9;
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        }  
+    }
+    @keyframes actionsheet-animations{
+        0%{transform: translateY(100%);opacity:0;}
+        100%{transform: 0;opacity:1;}
+    }
+    @keyframes actionsheet-close-animations{
+        0%{transform: 0;opacity:1;}
+        100%{transform: translateY(100%);opacity:0;}
+    }
+    
+}

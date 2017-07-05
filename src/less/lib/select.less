@@ -1,0 +1,84 @@
+#select-popup{
+    .select-mask{
+        position: fixed;
+        background: rgba(0,0,0,0.3);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .btn{
+        position: fixed;
+        bottom: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        width: 100%;
+        z-index: 2;
+        overflow: hidden;
+        background: #FFFFFF;
+        color: #0575f2;
+        animation: select-animations 0.3s ease-in forwards;
+        .btn-close{
+            float: left;
+            margin-left: 60px;
+        }
+        .confbt{
+            float: right;
+            margin-right: 60px;
+        }
+    }
+    .content{
+        position: fixed;
+        display: flex;
+        bottom: 0;
+        height: 180px;
+        width: 100%;
+        overflow: hidden;
+        z-index: 1;
+        background: #d5d8df;
+        -webkit-mask: -webkit-gradient(linear, 0% 40%, 0% 0%, from(#debb47), to(rgba(36, 142, 36, 0)));
+        -webkit-mask: -webkit-linear-gradient(bottom, #debb47 40%, rgba(36, 142, 36, 0));
+        animation: select-animations 0.3s ease-in forwards;
+        .fstr,.sstr,.tstr{
+            padding: 10px 0;
+            margin-top: 60px;
+            flex: 1;
+            li{
+                line-height: 40px;
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+        .fstra,.sstra,.tstra{
+            position: relative;
+            flex: 1;
+            -webkit-mask: -webkit-gradient(linear, 0% 50%, 0% 100%, from(#debb47), to(rgba(36, 142, 36, 0)));
+            -webkit-mask: -webkit-linear-gradient(top, #debb47 50%, rgba(36, 142, 36, 0));
+            .cbottom{
+                position: fixed;
+                display: flex;
+                bottom: 0;
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+            }
+            .selected{
+                position: absolute;
+                display: flex;
+                bottom: 70px;
+                height: 38px;
+                border-top: 1px solid #abaeb5;
+                border-bottom: 1px solid #abaeb5;
+                z-index: 0;
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+    
+    @keyframes select-animations{
+        0%{transform: translateY(50px);opacity:0;}
+        100%{transform: translateX(0);opacity:1;}
+    }
+}

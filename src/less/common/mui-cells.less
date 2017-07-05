@@ -1,0 +1,85 @@
+ul {
+    margin-top: 10px;
+    &.mui-cells {
+        font-size: 16px;
+        margin-top: 10px;
+        position: relative;
+        padding: 5px 0;
+        .mui-cell {
+            min-height: 40px;
+            display: flex;
+            padding: 5px 15px;
+            position: relative;
+            .mui-cell__bd {
+                margin: auto;
+                flex: 1;
+                text-align: left;
+            }
+            .mui-cell__ft {
+                text-align: right;
+            }
+            .mui-cell__ft_r {
+                position: relative;
+            }
+            .mui-cell__ft_r:after {
+                content: " ";
+                display: inline-block;
+                height: 12px;
+                width: 12px;
+                border-width: 2px 2px 0 0;
+                border-color: #e2e2e2;
+                border-style: solid;
+                transform:rotate(45deg);
+                position: absolute;
+                top: 50%;
+                margin-top: -4px;
+                right: 2px;
+            }
+        }
+        .mui-cell:after {
+            content: " ";
+            position: absolute;
+            left: 15px;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            border-bottom: 1px solid #D9D9D9;
+            color: #D9D9D9;
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        }
+        .mui-cell:last-child:after {
+            display: none;
+        }
+    }
+    &.mui-cells:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 1px;
+        border-top: 1px solid #D9D9D9;
+        color: #D9D9D9;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+    &.mui-cells:after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        border-bottom: 1px solid #D9D9D9;
+        color: #D9D9D9;
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+}
